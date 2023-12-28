@@ -15,7 +15,7 @@ else
   echo "Setup NDK_HOME first!!!"
   exit 1
 fi
-git checkout $LIBRERA_TAG
+#git checkout $LIBRERA_TAG
 
 sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d' -e '/_admob/d' app/build.gradle
 mkdir app/src/main/jniLibs
