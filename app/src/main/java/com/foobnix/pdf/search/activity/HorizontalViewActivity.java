@@ -298,6 +298,7 @@ public class HorizontalViewActivity extends AdsFragmentActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         quickBookmark = getString(R.string.fast_bookmark);
         intetrstialTimeoutSec = ADS.FULL_SCREEN_TIMEOUT_SEC;
         LOG.d("getRequestedOrientation", AppState.get().orientation, getRequestedOrientation());
@@ -1628,6 +1629,7 @@ public class HorizontalViewActivity extends AdsFragmentActivity {
         // AppSP.get().isCut = false;
         PageImageState.get().clearResouces();
 
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
         super.onDestroy();
 
@@ -1692,6 +1694,7 @@ public class HorizontalViewActivity extends AdsFragmentActivity {
         if (ttsActive != null) {
             ttsActive.setVisibility(TxtUtils.visibleIf(TTSEngine.get().isTempPausing()));
         }
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
     }
 
@@ -1708,6 +1711,7 @@ public class HorizontalViewActivity extends AdsFragmentActivity {
         if (dc != null) {
             dc.resetReadTimer();
         }
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
     }
 
